@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "sept. 2021 - jul. 2024",
+    title: "Beca trabajo",
+    company: "Universidad Católica Andrés Bello",
+    description:
+      "Encargado de llevar a producción y de post producir el contenido académico que los profesores querían virtualizar. Trabajando con la conceptualización, planificación, desarrollo, lanzamiento y seguimiento de nuevos productos, además de hacer el seguimiento y el análisis de los datos del contenido virtualizado en las plataformas correspondientes.",
+  },
+  {
+    date: "ago. 2023 - nov. 2023",
+    title: "Pasante",
+    company: "Telefóncica",
+    description:
+      "Responsable de realizar un estudio de factibilidad y elaboración de propuesta técnica para la migración de servicios Legacy PDH/SDH a la red IP/MPLS de Telefónica Venezolana, C.A.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
