@@ -54,15 +54,7 @@ const TAGS = {
   },
 }
 const PROJECTS = [
-  {
-    title: "Medición antopométrica en niños, adolescentes y adultos",
-    description:
-      "Desarrollé una aplicación móvil que permite crear perfiles personalizados y buscarlos fácilmente. Además, la app tiene la capacidad de crear historias médicas para cada perfil, lo que permite un seguimiento detallado de la salud y bienestar de cada usuario. Lo más interesante de esta herramienta es que al ingresar la información nutricional de cada persona, se obtienen resultados precisos y útiles para mejorar su alimentación y estilo de vida.",
-    github: "https://github.com/MiguelVieirar16/MedicionAntropometricaapp",
-    image: "/projects/androidapp.webp",
-    tags: [TAGS.JAVA, TAGS.MYSQL],
-  },
-  {
+{
     title: "Aplicación web que permite hacer una modulación AM",
     description:
       "Desarrollé una aplicación de escritorio en Python con interfaz gráfica que permite realizar modulación AM de manera fácil y rápida. La app cuenta con una interfaz gráfica intuitiva donde se puede seleccionar el tipo de onda portadora, su frecuencia y amplitud. Además, tiene 4 botones que permiten mostrar el mensaje, graficar la onda portadora, graficar la modulación resultante y comparar las diferentes ondas con el mensaje y la modulación.",
@@ -71,9 +63,17 @@ const PROJECTS = [
     link: "https://github.com/MiguelVieirar16/modulacionam",
     tags: [TAGS.PYTHON],
   },
+  {
+    title: "Medición antopométrica en niños, adolescentes y adultos",
+    description:
+      "Desarrollé una aplicación móvil que permite crear perfiles personalizados y buscarlos fácilmente. Además, la app tiene la capacidad de crear historias médicas para cada perfil, lo que permite un seguimiento detallado de la salud y bienestar de cada usuario. Lo más interesante de esta herramienta es que al ingresar la información nutricional de cada persona, se obtienen resultados precisos y útiles para mejorar su alimentación y estilo de vida.",
+    github: "https://github.com/MiguelVieirar16/MedicionAntropometricaapp",
+    image: "/projects/androidapp.webp",
+    tags: [TAGS.JAVA, TAGS.MYSQL],
+  },
+
 ]
 ---
-
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
