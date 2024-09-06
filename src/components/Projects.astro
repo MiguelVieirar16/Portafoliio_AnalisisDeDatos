@@ -3,6 +3,7 @@ import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
+import Dataset from "./icons/Dataset.astro"
 import LinkButton from "./LinkButton.astro"
 import MySQL from "./icons/MySQL.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
@@ -55,28 +56,48 @@ const TAGS = {
 }
 const PROJECTS = [
 {
-    title: "Aplicación web que permite hacer una modulación AM",
+    title: "Análisis tasa de abandono de clientes",
     description:
-      "Desarrollé una aplicación de escritorio en Python con interfaz gráfica que permite realizar modulación AM de manera fácil y rápida. La app cuenta con una interfaz gráfica intuitiva donde se puede seleccionar el tipo de onda portadora, su frecuencia y amplitud. Además, tiene 4 botones que permiten mostrar el mensaje, graficar la onda portadora, graficar la modulación resultante y comparar las diferentes ondas con el mensaje y la modulación.",
-    github: "https://github.com/MiguelVieirar16/modulacionam",
-    image: "/projects/generador.webp",
-    link: "https://github.com/MiguelVieirar16/modulacionam",
-    tags: [TAGS.PYTHON],
+      "Datos proporcionados por Datacamp. Se evalúa la tasa de abanonos de los clientes de una empresa. Se analiza la razón de abandono, ubicación geográfica del cliente, edad, género y planes que contrató ",
+    image: "/projects/BI_CHURN.webp",
+    dataset: "https://drive.google.com/drive/folders/1WuzyeDklXYDkunIapGo3EViuUaDGla3n?usp=sharing",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNWMxYmZkZjctMTdmZi00NmViLWFjZTEtNmU4NjI4Zjc1NDExIiwidCI6ImUxOGVhZDk1LWZkY2ItNDE2MC05ZjY0LTg5ZDNhNWYxNWEyNCJ9",
+    tags: [TAGS.POWERBI, TAGS.POSTGRE, TAGS.EXCEL],
+  },
+{
+    title: "Análisis de empleados en la empresa Atlas Labs",
+    description:
+      "Datos proporcionados por Datacamp. En este informe se puede ver un análisis hecho a los empleados de la empresa. En dicho informe se puede evaluar aspectos como la proporción entre salarios con edades y étnias, sentimiento por el trabajo y la empresa y el desgaste de los empleados.",
+    image: "/projects/BI_RRHH.webp",
+    dataset: "https://drive.google.com/drive/folders/1lOqMWMxMCr7iXypOELSjb1P1oYtfv6X4?usp=sharing",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNzQ2YmI3OTAtNDE4NS00ZDUxLTg1MzUtNGViNWI2Yjk0MTMxIiwidCI6ImUxOGVhZDk1LWZkY2ItNDE2MC05ZjY0LTg5ZDNhNWYxNWEyNCJ9",
+    tags: [TAGS.POWERBI, TAGS.POSTGRE, TAGS.EXCEL],
   },
   {
-    title: "Medición antopométrica en niños, adolescentes y adultos",
+    title: "Perspectivas del mercado laboral de la ciencia de datos",
     description:
-      "Desarrollé una aplicación móvil que permite crear perfiles personalizados y buscarlos fácilmente. Además, la app tiene la capacidad de crear historias médicas para cada perfil, lo que permite un seguimiento detallado de la salud y bienestar de cada usuario. Lo más interesante de esta herramienta es que al ingresar la información nutricional de cada persona, se obtienen resultados precisos y útiles para mejorar su alimentación y estilo de vida.",
-    github: "https://github.com/MiguelVieirar16/MedicionAntropometricaapp",
-    image: "/projects/androidapp.webp",
-    tags: [TAGS.JAVA, TAGS.MYSQL],
+      "Datos proporcionados por Datacamp. Este análisis busca determinar la demanda de la ciencia de datos dentro del marcado laboral, así como las habilidades que la mayoría de personas tienen al entrar a un campo como este. Se puede ver la experiencia y el puesto en el que se puede entrar o lo que se necesita para poder entrar, así como su sueldo y crecimiento dentro del mercado laboral.",
+      image: "/projects/BI_JOBS.webp",
+      dataset: "https://drive.google.com/drive/folders/1WoxQWfkLPk9wymdTMXjMUtxDLsTy3UXq?usp=sharing",
+      link: "https://app.powerbi.com/view?r=eyJrIjoiNGVkYmEwMWEtY2M0Mi00YWI1LWIxZmEtYzAxMjJmZmFmN2Q1IiwidCI6ImUxOGVhZDk1LWZkY2ItNDE2MC05ZjY0LTg5ZDNhNWYxNWEyNCJ9",
+    tags: [TAGS.POWERBI, TAGS.MYSQL, TAGS.EXCEL],
+  },
+  {
+    title: "Análisis de polaridad de comentarios de un restaurant",
+    description:
+      "Se hizo un análisis mediante un modelo de inteligencia artificial previamente entrenado de los comentarios dejados en un restaurant. Este modelo está entrenado para entender comentarios en inglés por lo que se tuvieron que traducir para poder obtener una polaridad correcta.",
+    github: "https://github.com/MiguelVieirar16/Analisis_emociones",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNDM3MmM4ZmMtYWVkMC00NGQxLWEwYTktMDU1ZmJlYjgzNzM1IiwidCI6ImUxOGVhZDk1LWZkY2ItNDE2MC05ZjY0LTg5ZDNhNWYxNWEyNCJ9",
+    dataset: "https://drive.google.com/drive/folders/1cj_oyLfZnQv-GnI33V02d8jYf5MDf_Gd?usp=sharing",
+    image: "/projects/BI_EMOCIONES.webp",
+    tags: [TAGS.POWERBI, TAGS.PYTHON],
   },
 
 ]
 ---
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, dataset}) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -115,6 +136,14 @@ const PROJECTS = [
             <LinkButton href={link}>
               <Link class="size-4" />
               Preview
+
+            </LinkButton>
+          )}
+          {dataset && (
+            <LinkButton href={dataset}>
+              <Dataset class="size-4" />
+              Dataset
+
             </LinkButton>
           )}
         </footer>
