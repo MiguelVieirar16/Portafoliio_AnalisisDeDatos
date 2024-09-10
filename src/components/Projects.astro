@@ -11,6 +11,7 @@ import Python from "./icons/Python.astro"
 import Java from "./icons/Java.astro"
 import Excel from "./icons/Excel.astro"
 import PowerBI from "./icons/PowerBI.astro"
+import Firebase from "./icons/Firebase.astro"
 
 const TAGS = {
   NEXT: {
@@ -53,6 +54,11 @@ const TAGS = {
     class: "bg-[#0D321E] text-white",
     icon: Excel,
   },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#9C4323] text-white",
+    icon: Firebase,
+  },
 }
 const PROJECTS = [
 {
@@ -69,7 +75,7 @@ const PROJECTS = [
       "Esta aplicación permite medir parámetros antropométricos en niños, adolescentes y adultos. La app incluye funciones para registrar usuarios, buscar y modificar datos, y programar citas médicas. Además, calcula el índice de masa corporal (IMC) a partir de los datos ingresados, así como otros parámetros que influyen en la medición antropométrica como lo es la circunferencia del brazo y semanas de gestación en caso de un embarazo. La aplicación se conecta a una base de datos NoSQL en Google Firebase.",
     image: "/projects/androidapp.webp",
     github: "https://github.com/MiguelVieirar16/MedicionAntropometricaapp.git",
-    tags: [TAGS.JAVA],
+    tags: [TAGS.JAVA, TAGS.FIREBASE],
   },
 
 ]
